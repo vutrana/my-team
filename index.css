@@ -1,0 +1,163 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #000000;
+}
+
+p {
+  max-width: 350px;
+}
+
+#container {
+  max-width: 1200px;
+  padding: 12px 24px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  margin: 50px 0 30px;
+}
+
+header .title {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+  margin: 38px 0;
+}
+
+header .introduction h1 {
+  text-transform: uppercase;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
+header .introduction p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* Main */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+  padding: 5px;
+}
+
+.team__member {
+  width: 100%;
+}
+
+.team__even {
+  padding-top: 50px;
+}
+
+.team__odd {
+  padding-bottom: 50px;
+}
+
+.team__img {
+  display: flex;
+  gap: 6px;
+  width: 90%;
+}
+
+.team__img img {
+  width: 100%;
+}
+
+.team__img .team__title {
+  font-family: PT Serif;
+  font-size: 10px;
+  line-height: 13px;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.team__name {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer__content {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17.07px;
+  text-align: center;
+  color: #bdbdbd;
+}
+
+.footer__content span {
+  font-weight: 700;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 660px) {
+  #container {
+    padding: 40px 150px;
+  }
+
+  header {
+    margin: 50px 0 100px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  header .title {
+    margin: 0;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+  }
+
+  header .introduction p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 30px;
+    padding: 5px;
+  }
+
+  .team__member:nth-child(4),
+  .team__member:nth-child(6) {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  .team__member:nth-child(5) {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+}
